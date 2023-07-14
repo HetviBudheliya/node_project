@@ -7,7 +7,7 @@ const profile = (req,res) =>{
 
 const changeProfile = async (req,res) =>{
     try{
-        const{editid,name,password,cpassword} = req.body
+        const{id,editid,name,password,cpassword} = req.body
         if(!name || !password || !cpassword){
             console.log("Enter all fild");
             return res.redirect('back');
