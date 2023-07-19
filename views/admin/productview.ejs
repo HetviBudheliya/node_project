@@ -1,0 +1,95 @@
+<%- include ('header') %>
+    <style>
+        table .btn {
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+
+        table {
+            width: 100%;
+            padding: 10;
+            border-color: #f58b8b;
+            background-color: black;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(235, 22, 22, 0.24);
+            text-align: center;
+        }
+
+        tbody tr th {
+            color: aliceblue;
+        }
+
+        table th,
+        td {
+            padding: 10px;
+            color: #6C7293;
+            border: 1px solid #c00b0bb7;
+        }
+    </style>
+    <!-- Form Start -->
+    <div class="container-fluid pt-4 px-4">
+        <!-- tbl data print -->
+        <div class="row">
+            <div class="col-12 col-sm-12 mb-5">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Sub Category</th>
+                                <th>Ex Sub Category</th>
+                                <th>Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% productdata.map((val) => { 
+                                const{categoryId, subcategoryId,exsubcategoryId,name,qty,price,description}=val;
+                            %> 
+                                <tr>
+                                    <td><%= categoryId.category %></td>
+                                    <td><%= subcategoryId.subcategory %></td>
+                                    <td><%= exsubcategoryId.exsubcategory %></td>
+                                    <td><%= name %></td>
+                                    <td><%= qty %></td>
+                                    <td><%= price %></td>
+                                    <td><%= description %></td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary me-2">Delete</a> ||
+                                        <a href="#" class="btn btn-primary ms-2">Edit</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form End -->
+
+    <%- include ('footer') %>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/chart/chart.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-tim0ezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        </body>
+
+        </html>

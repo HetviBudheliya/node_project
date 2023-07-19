@@ -126,7 +126,7 @@ const deleteBlogData = async (req,res) =>{
         // delete img
         let deleteImg = await blogCrud.findById(id)
         if(deleteImg){
-            fs.unlinkSync(deleteImg.image)
+            fs.unlinkSync(deleteImg.image);
         }else{
             console.log("image not deleted");
             return false;
