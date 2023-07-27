@@ -62,32 +62,6 @@ const logOut = (req,res) =>{
 }
 // logout data end
 
-const table = (req, res) => {
-	res.render('admin/table');
-}
-const button = (req, res) => {
-	res.render('admin/button');
-}
-const chart = (req, res) => {
-	res.render('admin/chart');
-}
-const element = (req, res) => {
-	res.render('admin/element');
-}
-const form = (req, res) => {
-	res.render('admin/form');
-}
-const widget = (req, res) => {
-	res.render('admin/widget');
-}
-const err = (req, res) => {
-	res.render('admin/404');
-}
-const typography = (req, res) => {
-	res.render('admin/typography');
-}
-
-
 module.exports = {
     login,
     register,
@@ -95,12 +69,4 @@ module.exports = {
     registerData,
     loginData,
     logOut,
-    table,
-    button,
-    chart,
-    element,
-    form,
-    widget,
-    err,
-    typography
 }

@@ -53,7 +53,8 @@ routes.post('/exsubcatAdd',exsubController.exsubcatAdd);
 
 // product
 routes.get('/product',productController.product);
-routes.post('/addproduct',productController.addproduct);
-routes.get('/poductview',productController.poductview);
+routes.post('/addproduct',fileupload,productController.addproduct);
+routes.get('/productview',productController.productview);
+routes.get('/deleteProduct',productController.deleteProduct);
 
 module.exports = routes;

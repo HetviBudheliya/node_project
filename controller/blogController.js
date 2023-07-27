@@ -87,7 +87,7 @@ const insertBlogData = async (req,res) =>{
                 console.log("Blog Successfully Add");
                 return res.redirect('/viewBlogData');
             }else{
-                console.log(err);
+                console.log("blog isn't add");
                 return res.redirect('back');
             }
         }
